@@ -11,10 +11,12 @@ export async function registration(user) {
     const dataUser = await findUser(user);
     console.log("fff", dataUser);
 
-    // if (dataUser.length !== 0) {
-    const regData = await addUser(user);
-    console.log(regData);
-    const token = createToken(user.user_name, user.email);
-    console.log("saddsad", token);
-    return token;
+    if (dataUser.length > 0) {
+        return { msg: "User already exists" };
+    } else {
+        await addUser(user);
+        const token = createToken(user.user_name, user.email);
+        console.log("saddsad", token);
+        return token;
+    }
 }

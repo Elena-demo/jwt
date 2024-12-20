@@ -1,0 +1,13 @@
+.btn {
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  border: 0px;
+  background-color: rgb(50, 153, 237);
+}
+
+.btn:hover {
+  outline: 2px solid blue;
+  background-color: blue;
+}
