@@ -8,6 +8,5 @@ email varchar(25),
 password varchar(255)
 );
 
-select user_name from users where email = ''
 
 insert into users (user_name, email, password) values ('Иванов', 'iv@mail.ru', 'vkdjhnvkjf');

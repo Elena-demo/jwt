@@ -1,13 +1,18 @@
 import "./App.css";
-import { Form } from "./Components/Form/Form.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Form } from "./Components/Form/Form";
+import PageUser from "./Components/PageUser/PageUser";
 
 function App() {
-    return ( <
-        div className = "container" >
-        <
-        Form / >
-        <
-        /div>
+    return (
+        <BrowserRouter>
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<Form />} />{" "}
+                    <Route path="/user-account" element={<PageUser />} />{" "}
+                </Routes>{" "}
+            </div>{" "}
+        </BrowserRouter>
     );
 }
 
